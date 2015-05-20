@@ -3,38 +3,116 @@
 <head>
 <title>Google</title>
 <style type="text/css">
+
 	body {
 		font-family: arial, sans-serif;
 	}
-	ul {
-		display: inline-block;
+
+	ul li {
+		display: inline;
 	}
+
+
+/******
+HEADER
+******/
+	
+	header {
+	margin-top: 15px;
+	width: 100%;
+	height: 60px;
+	}
+	
+	#topNav {
+		float: right;
+	}
+	
+	a img {
+		height: 20px;
+		width: 20px;
+		color: rgba(112,112,112,1);
+	}
+
+/******
+SECTION
+******/	
+	
+	section {
+		margin: auto;
+		max-width: 500px;
+	}
+	
+	.logo {
+		width: 269px;
+		height: 95px;
+	}
+	
+	#searchBar {
+	margin-bottom: 15px;
+  	width: 570px;
+  	height: 29px; 
+	}
+	
+	.button {
+		height: 30px;
+		width: 130px;
+		border: 1px solid #dcdcdc;
+		color: #444;
+		background-color: #f5f5f5;
+		font-weight: bold;
+	}
+
+/*******
+Link Styles
+*******/
+
+	a {
+	text-decoration: none;
+	color: rgba(112,112,112,1);
+	}
+	a:hover {
+	color: rgba(0,0,0,1);
+	}
+
 </style>
 </head>
 <body>
 	<header>
-		<ul>
-			<li><a href="#">+Nick</a></li>
-			<li><a href="#">Gmail</a></li>
-			<li><a href="#">Images</a></li>
-			<li id="apps"><a href="#"></a></li>
-			<li id="notify"><a href="#"></a></li>
-			<li id="share"><a href="#"></a></li>
-			<li id="profile"><a href="#"></a></li>
-		</ul>
+		<nav>
+			<ul id="topNav">
+				<li><a href="#">+Nick</a></li>
+				<li><a href="#">Gmail</a></li>
+				<li><a href="#">Images</a></li>
+				<li><a href="#"><img src="apps.png"></a></li>
+				<li><a href="#"><img src="bell.png"></a></li>
+				<li><a href="#"><img src="share.png"></a></li>
+				<li><input type="button"></input></li>
+			</ul>
+		</nav>
 	</header>
 	<section>
-		<div>
-			<img src="google.png">
-		</div>
-		<div>
-			<input type="text" name="Search">
+		<div class="wrapper">
+			<img src="google.png" class="logo">
+			<form action="POST">
+				<div>
+					<input type="text" name="Search" id="searchBar">
+				</div>
+				<div>
+					<input type="button" name="Go" value="Google Search" class="button">
+					<input type="button" name="Lucky" value="I'm Feeling Lucky" class="button">
+				</div>
+			</form>	
 		</div>
 	</section>
 	<footer>
 		<ul id="left">
+			<li>Advertising</li>
+			<li>Business</li>
+			<li>About</li>
 		</ul>
 		<ul id="right">
+			<li>Privacy & Terms</li>
+			<li>Settings</li>
 		</ul>
 	</footer>
 
